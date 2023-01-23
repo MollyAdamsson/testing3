@@ -66,8 +66,8 @@ while turns > 0:
     print('Player has ' +str(turns) + ' turns remaining ')
 
     # Computer's turn
-    create_ships(player_ships)
     create_ships(computer_ships)
+    create_ships(player_ships)
     turns = 10
     while turns > 0:
        print('Computer Turn')
