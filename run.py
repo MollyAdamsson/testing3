@@ -28,6 +28,7 @@ def get_player_guess():
         column=input('Please enter a guess column A-H ')
     return int(row)-1,let_to_num[column]
 
+
 #Function that creates the ships
 def create_ships(board):
     for ship in range(5):
@@ -63,7 +64,12 @@ while turns > 0:
         print("Player has sunk all the battleships ")
         break
     print('Player has ' +str(turns) + ' turns remaining ')
+
     # Computer's turn
+    create_ships(player_ships)
+    create_ships(computer_ships)
+    turns = 10
+    while turns > 0:
        print('Computer Turn')
     computer_row, computer_column = randint(0,7), randint(0,7)
     if computer_guesses[computer_row][computer_column] == '-':
